@@ -49,6 +49,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.menu_tablayout:
                 startActivity(new Intent(this, TabLayoutActivity.class));
                 break;
+
+            case R.id.menu_tablayout_viewpager:
+                startActivity(new Intent(this, TabPagerActivity.class));
+                break;
              }
 
             Toast.makeText(this, "Menu Item Selected : " + item.getTitle(), Toast.LENGTH_SHORT).show();
