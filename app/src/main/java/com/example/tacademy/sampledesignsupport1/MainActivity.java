@@ -1,6 +1,7 @@
 package com.example.tacademy.sampledesignsupport1;
 
 import android.content.Intent;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -56,6 +57,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.menu_text_input_layout:
                 startActivity(new Intent(this, TextInputLayoutActivity.class));
+                break;
+
+            case R.id.menu_coordinate_layout:
+                startActivity(new Intent(this, CoodinatorActivity.class));
+                break;
+
+            case R.id.menu_appbar_layout:
+                startActivity(new Intent(this, AppBarActivity.class));
                 break;
              }
 

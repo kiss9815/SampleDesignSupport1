@@ -17,7 +17,9 @@
         </activity>
         <activity android:name=".TabLayoutActivity" />
         <activity android:name=".TabPagerActivity" />
-        <activity android:name=".TextInputLayoutActivity"></activity>
+        <activity android:name=".TextInputLayoutActivity" />
+        <activity android:name=".CoodinatorActivity" />
+        <activity android:name=".AppBarActivity"></activity>
     </application>
 
 </manifest>
