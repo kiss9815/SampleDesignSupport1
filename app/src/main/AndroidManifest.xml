@@ -19,7 +19,9 @@
         <activity android:name=".TabPagerActivity" />
         <activity android:name=".TextInputLayoutActivity" />
         <activity android:name=".CoodinatorActivity" />
-        <activity android:name=".AppBarActivity"></activity>
+        <activity android:name=".AppBarActivity" />
+        <activity android:name=".CollapsingToolbarActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

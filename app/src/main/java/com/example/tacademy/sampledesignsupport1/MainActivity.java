@@ -66,6 +66,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.menu_appbar_layout:
                 startActivity(new Intent(this, AppBarActivity.class));
                 break;
+
+            case R.id.menu_collapsing_toolbar_layout:
+                startActivity(new Intent(this, CollapsingToolbarActivity.class));
+                break;
              }
 
             Toast.makeText(this, "Menu Item Selected : " + item.getTitle(), Toast.LENGTH_SHORT).show();
