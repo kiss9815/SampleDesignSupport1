@@ -1,5 +1,6 @@
 package com.example.tacademy.sampledesignsupport1;
 
+import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -44,29 +45,34 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.menu_2:
             case R.id.menu_3:
                 item.setChecked(true);
-            case R.id.menu_4:
-                Toast.makeText(this, "Menu Item Selected : " + item.getTitle(), Toast.LENGTH_SHORT).show();
-                Animation animation = AnimationUtils.loadAnimation(MainActivity.this, android.R.anim.slide_out_right);
-                animation.setAnimationListener(new Animation.AnimationListener() {
-                    @Override
-                    public void onAnimationStart(Animation animation) {
+                break;
+            case R.id.menu_tablayout:
+                startActivity(new Intent(this, TabLayoutActivity.class));
+                break;
+             }
 
-                    }
+            Toast.makeText(this, "Menu Item Selected : " + item.getTitle(), Toast.LENGTH_SHORT).show();
+        Animation animation = AnimationUtils.loadAnimation(MainActivity.this, android.R.anim.slide_out_right);
+        animation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
 
-                    @Override
-                    public void onAnimationEnd(Animation animation) {
-                        navigationView.setVisibility(View.GONE); //애니메이션 끝나면 없어지도록
+            }
 
-                    }
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                navigationView.setVisibility(View.GONE); //애니메이션 끝나면 없어지도록
 
-                    @Override
-                    public void onAnimationRepeat(Animation animation) {
+            }
 
-                    }
-                });
-                navigationView.startAnimation(animation);
-                return true;
-        }
-        return false;
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+        navigationView.startAnimation(animation);
+        return true;
     }
+
+
 }
